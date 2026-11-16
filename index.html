@@ -251,226 +251,11 @@
     <div class="body">
       <div class="split">
 
-        <!-- ORGANIZATIONAL CHART PREVIEW -->
-        <div class="card rv" style="--c: var(--violet)">
-
-          <div class="seg" role="group" aria-label="Preview organizational systems">
-            <button type="button" data-variant="tree" aria-pressed="true">
-              Structure
-            </button>
-            <button type="button" data-variant="flat" aria-pressed="false">
-              Communication
-            </button>
-            <button type="button" data-variant="matrix" aria-pressed="false">
-              Feedback
-            </button>
-          </div>
-
-          <button class="zoom" type="button" data-zoom aria-label="Enlarge the chart preview">
-
-            <svg class="orgsvg" id="orgsvg" data-active="tree"
-              viewBox="0 0 340 230"
-              role="img"
-              aria-label="CyberKada interconnected organizational system">
-
-              <!-- 1. INTERCONNECTED ORGANIZATIONAL STRUCTURE -->
-              <g data-v="tree">
-
-                <!-- connecting lines -->
-                <path class="ln"
-                  d="M170 37 V57
-                     M55 57 H285
-                     M55 57 V77
-                     M170 57 V77
-                     M285 57 V77
-                     M55 105 V123
-                     M170 105 V123
-                     M285 105 V123
-                     M55 151 V174
-                     M170 151 V174
-                     M285 151 V174
-                     M55 174 H285"/>
-
-                <!-- President -->
-                <g class="nd n-pink">
-                  <title>President</title>
-                  <rect x="125" y="9" width="90" height="28" rx="8"/>
-                  <text x="170" y="27">President</text>
-                </g>
-
-                <!-- Executive officers -->
-                <g class="nd n-violet">
-                  <rect x="10" y="77" width="90" height="28" rx="8"/>
-                  <text x="55" y="95">Vice Pres.</text>
-                </g>
-
-                <g class="nd n-sky">
-                  <rect x="125" y="77" width="90" height="28" rx="8"/>
-                  <text x="170" y="95">Secretary</text>
-                </g>
-
-                <g class="nd n-lime">
-                  <rect x="240" y="77" width="90" height="28" rx="8"/>
-                  <text x="285" y="95">Treasurer</text>
-                </g>
-
-                <!-- Committees -->
-                <g class="nd n-violet">
-                  <rect x="10" y="123" width="90" height="28" rx="8"/>
-                  <text x="55" y="141">Technical</text>
-                </g>
-
-                <g class="nd n-sky">
-                  <rect x="125" y="123" width="90" height="28" rx="8"/>
-                  <text x="170" y="141">Creatives</text>
-                </g>
-
-                <g class="nd n-lime">
-                  <rect x="240" y="123" width="90" height="28" rx="8"/>
-                  <text x="285" y="141">Events</text>
-                </g>
-
-                <!-- Members -->
-                <g class="nd n-ice">
-                  <rect x="105" y="174" width="130" height="30" rx="9"/>
-                  <text x="170" y="193">Organization Members</text>
-                </g>
-
-                <text x="170" y="221" text-anchor="middle" class="svg-note">
-                  Shared responsibility and coordination
-                </text>
-              </g>
-
-
-              <!-- 2. COMMUNICATION FLOW -->
-              <g data-v="flat">
-
-                <defs>
-                  <marker id="commArrow" markerWidth="6" markerHeight="6"
-                    refX="5" refY="3" orient="auto">
-                    <path d="M0 0 L6 3 L0 6" fill="none"
-                      stroke="currentColor" stroke-width="1"/>
-                  </marker>
-                </defs>
-
-                <!-- central leadership -->
-                <g class="nd n-pink">
-                  <rect x="120" y="8" width="100" height="30" rx="9"/>
-                  <text x="170" y="27">Leadership</text>
-                </g>
-
-                <!-- communication lines -->
-                <path class="ln"
-                  marker-end="url(#commArrow)"
-                  d="M170 38 V65
-                     M55 65 H285
-                     M55 65 V94
-                     M170 65 V94
-                     M285 65 V94"/>
-
-                <!-- departments -->
-                <g class="nd n-violet">
-                  <rect x="10" y="94" width="90" height="30" rx="9"/>
-                  <text x="55" y="113">Technical</text>
-                </g>
-
-                <g class="nd n-sky">
-                  <rect x="125" y="94" width="90" height="30" rx="9"/>
-                  <text x="170" y="113">Creatives</text>
-                </g>
-
-                <g class="nd n-lime">
-                  <rect x="240" y="94" width="90" height="30" rx="9"/>
-                  <text x="285" y="113">Events</text>
-                </g>
-
-                <!-- cross-department coordination -->
-                <path class="ln"
-                  marker-end="url(#commArrow)"
-                  d="M100 109 H125
-                     M215 109 H240"/>
-
-                <!-- members and community -->
-                <path class="ln"
-                  marker-end="url(#commArrow)"
-                  d="M55 124 V159
-                     M170 124 V159
-                     M285 124 V159
-                     M55 159 H285
-                     M170 159 V180"/>
-
-                <g class="nd n-ice">
-                  <rect x="105" y="180" width="130" height="28" rx="9"/>
-                  <text x="170" y="198">Members</text>
-                </g>
-
-                <text x="170" y="224" text-anchor="middle" class="svg-note">
-                  Information sharing and coordination
-                </text>
-              </g>
-
-
-              <!-- 3. FEEDBACK SYSTEM -->
-              <g data-v="matrix">
-
-                <!-- organizational activities -->
-                <g class="nd n-pink">
-                  <rect x="110" y="8" width="120" height="30" rx="9"/>
-                  <text x="170" y="27">CyberKada</text>
-                </g>
-
-                <path class="ln" d="M170 38 V57"/>
-
-                <g class="nd n-sky">
-                  <rect x="100" y="57" width="140" height="30" rx="9"/>
-                  <text x="170" y="76">Activities &amp; Projects</text>
-                </g>
-
-                <path class="ln" d="M170 87 V106"/>
-
-                <g class="nd n-lime">
-                  <rect x="100" y="106" width="140" height="30" rx="9"/>
-                  <text x="170" y="125">Evaluation</text>
-                </g>
-
-                <path class="ln" d="M170 136 V155"/>
-
-                <g class="nd n-violet">
-                  <rect x="100" y="155" width="140" height="30" rx="9"/>
-                  <text x="170" y="174">Feedback &amp; Suggestions</text>
-                </g>
-
-                <!-- feedback loop -->
-                <path class="ln"
-                  d="M100 170 H35 V23 H110"/>
-
-                <path class="ln"
-                  d="M35 23 L44 17 M35 23 L44 29"/>
-
-                <text x="170" y="207" text-anchor="middle" class="svg-note">
-                  Continuous improvement and adaptation
-                </text>
-              </g>
-
-            </svg>
-          </button>
-
-          <p class="note" id="org-description">
-            CyberKada's officers, committees, and members work as
-            interconnected parts of one organizational system.
-          </p>
-        </div>
-
-
-        <!-- FRAMEWORK DESCRIPTION -->
-        <div class="card rv" style="--c: var(--violet)">
-
+                <!-- FRAMEWORK DESCRIPTION (left) -->
+        <div class="card fw rv" style="--c: var(--violet)">
           <p class="kicker">Chosen framework &amp; description</p>
-          <div class="chips">
-            <span class="tag ph-text" style="--c: var(--violet)">
-              <h2><strong>SYTEMS</strong></h2>
-            </span>
-          </div>
+
+          <h3 class="fw-word">Systems Perspective</h3>
 
           <p>
             CyberKada adopts the Systems Perspective, viewing the
@@ -490,13 +275,6 @@
 
           <p class="kicker">Key aspects of the framework</p>
 
-          <div class="lines">
-            <i style="--w:100%"></i>
-            <i style="--w:92%"></i>
-            <i style="--w:96%"></i>
-            <i style="--w:83%"></i>
-          </div>
-
           <div class="chips">
             <span class="tag">Systems Thinking</span>
             <span class="tag">Interdependence</span>
@@ -509,7 +287,177 @@
             depends on how effectively its members communicate,
             coordinate, and contribute to the larger system.
           </p>
+        </div>
 
+        <!-- ORGANIZATIONAL CHART PREVIEW (main highlight, right) -->
+        <div class="card chart-card rv" style="--c: var(--violet)">
+
+
+          <div class="seg" role="group" aria-label="Preview organizational systems">
+            <button type="button" data-variant="tree" aria-pressed="true">Structure</button>
+            <button type="button" data-variant="flat" aria-pressed="false">Communication</button>
+            <button type="button" data-variant="matrix" aria-pressed="false">Feedback</button>
+          </div>
+
+          <button class="zoom" type="button" data-zoom aria-label="Enlarge the chart preview">
+
+                        <svg class="orgsvg" id="orgsvg" data-active="tree"
+              viewBox="0 0 360 284"
+              role="img"
+              aria-label="CyberKada interconnected organizational system">
+
+              <!-- 1. STRUCTURE -->
+              <g data-v="tree">
+                <path class="ln"
+                  d="M180 44 V68
+                     M60 68 H300
+                     M60 68 V92 M180 68 V92 M300 68 V92
+                     M60 126 V150 M180 126 V150 M300 126 V150
+                     M60 184 V222 M180 184 V222 M300 184 V222
+                     M60 222 H300"/>
+
+                <g class="nd n-pink">
+                  <title>President</title>
+                  <rect x="125" y="10" width="110" height="34" rx="10"/>
+                  <text x="180" y="31">President</text>
+                </g>
+
+                <g class="nd n-violet">
+                  <rect x="12" y="92" width="96" height="34" rx="10"/>
+                  <text x="60" y="113">Vice Pres.</text>
+                </g>
+                <g class="nd n-sky">
+                  <rect x="132" y="92" width="96" height="34" rx="10"/>
+                  <text x="180" y="113">Secretary</text>
+                </g>
+                <g class="nd n-lime">
+                  <rect x="252" y="92" width="96" height="34" rx="10"/>
+                  <text x="300" y="113">Treasurer</text>
+                </g>
+
+                <g class="nd n-violet">
+                  <rect x="12" y="150" width="96" height="34" rx="10"/>
+                  <text x="60" y="171">Technical</text>
+                </g>
+                <g class="nd n-sky">
+                  <rect x="132" y="150" width="96" height="34" rx="10"/>
+                  <text x="180" y="171">Creatives</text>
+                </g>
+                <g class="nd n-lime">
+                  <rect x="252" y="150" width="96" height="34" rx="10"/>
+                  <text x="300" y="171">Events</text>
+                </g>
+
+                <g class="nd n-ice">
+                  <rect x="100" y="222" width="160" height="34" rx="11"/>
+                  <text x="180" y="243">Organization Members</text>
+                </g>
+
+                <text x="180" y="277" class="svg-note">
+                  Shared responsibility and coordination
+                </text>
+              </g>
+
+              <!-- 2. COMMUNICATION -->
+              <g data-v="flat">
+                <defs>
+                  <marker id="commArrow" markerWidth="6" markerHeight="6"
+                    refX="5" refY="3" orient="auto">
+                    <path d="M0 0 L6 3 L0 6" fill="none"
+                      stroke="currentColor" stroke-width="1"/>
+                  </marker>
+                </defs>
+
+                <g class="nd n-pink">
+                  <rect x="120" y="10" width="120" height="34" rx="10"/>
+                  <text x="180" y="31">Leadership</text>
+                </g>
+
+                <path class="ln" marker-end="url(#commArrow)"
+                  d="M180 44 V74
+                     M60 74 H300
+                     M60 74 V108
+                     M180 74 V108
+                     M300 74 V108"/>
+
+                <g class="nd n-violet">
+                  <rect x="12" y="108" width="96" height="34" rx="10"/>
+                  <text x="60" y="129">Technical</text>
+                </g>
+                <g class="nd n-sky">
+                  <rect x="132" y="108" width="96" height="34" rx="10"/>
+                  <text x="180" y="129">Creatives</text>
+                </g>
+                <g class="nd n-lime">
+                  <rect x="252" y="108" width="96" height="34" rx="10"/>
+                  <text x="300" y="129">Events</text>
+                </g>
+
+                <path class="ln" marker-end="url(#commArrow)"
+                  d="M108 125 H132
+                     M228 125 H252"/>
+
+                <path class="ln" marker-end="url(#commArrow)"
+                  d="M60 142 V186
+                     M180 142 V186
+                     M300 142 V186
+                     M60 186 H300
+                     M180 186 V212"/>
+
+                <g class="nd n-ice">
+                  <rect x="110" y="212" width="140" height="34" rx="11"/>
+                  <text x="180" y="233">Members</text>
+                </g>
+
+                <text x="180" y="270" class="svg-note">
+                  Information sharing and coordination
+                </text>
+              </g>
+
+              <!-- 3. FEEDBACK -->
+              <g data-v="matrix">
+                <g class="nd n-pink">
+                  <rect x="120" y="10" width="120" height="34" rx="10"/>
+                  <text x="180" y="31">CyberKada</text>
+                </g>
+
+                <path class="ln" d="M180 44 V70"/>
+
+                <g class="nd n-sky">
+                  <rect x="95" y="70" width="170" height="34" rx="10"/>
+                  <text x="180" y="91">Activities &amp; Projects</text>
+                </g>
+
+                <path class="ln" d="M180 104 V130"/>
+
+                <g class="nd n-lime">
+                  <rect x="95" y="130" width="170" height="34" rx="10"/>
+                  <text x="180" y="151">Evaluation</text>
+                </g>
+
+                <path class="ln" d="M180 164 V190"/>
+
+                <g class="nd n-violet">
+                  <rect x="95" y="190" width="170" height="34" rx="10"/>
+                  <text x="180" y="211">Feedback &amp; Suggestions</text>
+                </g>
+
+                <!-- feedback loop back to CyberKada -->
+                <path class="ln" d="M95 207 H34 V27 H120"/>
+                <path class="ln" d="M109 20 L120 27 L109 34"/>
+
+                <text x="180" y="256" class="svg-note">
+                  Continuous improvement and adaptation
+                </text>
+              </g>
+
+            </svg>
+          </button>
+
+          <p class="note" id="org-description">
+            CyberKada's officers, committees, and members work as
+            interconnected parts of one organizational system.
+          </p>
         </div>
 
       </div>
