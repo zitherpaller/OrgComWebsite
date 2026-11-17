@@ -77,14 +77,7 @@
       </button>
     </div>
 
-    <!-- Meet the group: each button opens that person's reflection -->
-    <div class="team" role="group" aria-label="Group members. Choose one to read their reflection.">
-      <button class="mb" type="button" data-member="gevera" style="--c: var(--lime)"><i class="mini">G</i>Gevera</button>
-      <button class="mb" type="button" data-member="paller" style="--c: var(--sky)"><i class="mini">P</i>Paller</button>
-      <button class="mb" type="button" data-member="pasion" style="--c: var(--ice)"><i class="mini">P</i>Pasion</button>
-      <button class="mb" type="button" data-member="beltran" style="--c: var(--pink)"><i class="mini">B</i>Beltran</button>
-      <button class="mb" type="button" data-member="mendiola" style="--c: var(--violet)"><i class="mini">M</i>Mendiola</button>
-    </div>
+    
 
     <!-- Divider: a line from afar, the surnames when zoomed in (filled by script.js) -->
     <div class="names" id="rule" aria-hidden="true"></div>
@@ -122,7 +115,7 @@
         </div>
       </div>
       <div class="body">
-        <h1>Welcome to CyberKada</h1>
+        <h1>Hello, we are CyberKada!</h1>
 
         <!-- EMBEDDED VIDEO (moved here from Section 3) -->
         <div class="card rv" style="--c: var(--ice)">
@@ -507,7 +500,7 @@
     </div>
   </section>
 
-  <!-- ============ 4 · REFLECTION PAGE ============ -->
+    <!-- ============ 4 · REFLECTION PAGE ============ -->
   <section class="band" id="s4" style="--c: var(--lime)" aria-labelledby="h4-reflection">
     <div class="wrap sec">
       <div class="rail-col">
@@ -521,70 +514,103 @@
       </div>
       <div class="body">
         <div class="card rv" style="--c: var(--lime)">
+
           <div class="tabs" role="tablist" aria-label="Group members">
-            <button class="tab" role="tab" type="button" id="tab-beltran" aria-controls="panel-beltran" aria-selected="false" tabindex="-1" style="--c: var(--pink)"><i class="mini">B</i>Beltran</button>
-            <button class="tab" role="tab" type="button" id="tab-gevera" aria-controls="panel-gevera" aria-selected="true" style="--c: var(--lime)"><i class="mini">G</i>Gevera</button>
+            <button class="tab" role="tab" type="button" id="tab-beltran" aria-controls="panel-beltran" aria-selected="true" style="--c: var(--pink)"><i class="mini">B</i>Beltran</button>
+            <button class="tab" role="tab" type="button" id="tab-gevera" aria-controls="panel-gevera" aria-selected="false" tabindex="-1" style="--c: var(--lime)"><i class="mini">G</i>Gevera</button>
             <button class="tab" role="tab" type="button" id="tab-mendiola" aria-controls="panel-mendiola" aria-selected="false" tabindex="-1" style="--c: var(--violet)"><i class="mini">M</i>Mendiola</button>
             <button class="tab" role="tab" type="button" id="tab-paller" aria-controls="panel-paller" aria-selected="false" tabindex="-1" style="--c: var(--sky)"><i class="mini">P</i>Paller</button>
             <button class="tab" role="tab" type="button" id="tab-pasion" aria-controls="panel-pasion" aria-selected="false" tabindex="-1" style="--c: var(--ice)"><i class="mini">P</i>Pasion</button>
           </div>
 
-          <div class="panel" role="tabpanel" id="panel-gevera" aria-labelledby="tab-gevera" style="--c: var(--lime)">
-            <div class="pan-head"><h3>Reflection by Gevera</h3></div>
-            <ol class="sent">
-              <li><div class="lines"><i style="--w:98%"></i><i style="--w:60%"></i></div></li>
-              <li><div class="lines"><i style="--w:100%"></i><i style="--w:44%"></i></div></li>
-              <li><div class="lines"><i style="--w:94%"></i><i style="--w:70%"></i></div></li>
-              <li><div class="lines"><i style="--w:100%"></i><i style="--w:52%"></i></div></li>
-              <li><div class="lines"><i style="--w:90%"></i><i style="--w:38%"></i></div></li>
-            </ol>
+          <!-- ===== BELTRAN ===== -->
+          <div class="panel" role="tabpanel" id="panel-beltran" aria-labelledby="tab-beltran" style="--c: var(--pink)">
+            <div class="refl">
+              <figure class="rphoto">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
+                <span>Photo of Beltran</span>
+              </figure>
+              <div class="rtext">
+                <div class="pan-head"><h3>Reflection by Beltran, Noella Mariz</h3></div>
+                <p>
+                  Through our Organizational Communication subject, I learned how important effective
+                  communication is in maintaining a well-organized and productive organization.
+                  I understood that communication is not just about sharing information but also
+                  about listening, understanding different perspectives, and working together toward
+                  a common goal. I also learned how different roles, responsibilities, and communication
+                  channels contribute to the success of a team. This subject helped me realize that
+                  misunderstandings can affect an organization's performance, which is why clarity, respect,
+                  and cooperation are essential. Overall, what I learned will help me become a better communicator
+                  and a more responsible team member in both my academic and future professional life.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="panel" role="tabpanel" id="panel-paller" aria-labelledby="tab-paller" style="--c: var(--sky)" hidden>
-            <div class="pan-head"><h3>Reflection by Paller</h3></div>
-            <ol class="sent">
-              <li><div class="lines"><i style="--w:96%"></i><i style="--w:54%"></i></div></li>
-              <li><div class="lines"><i style="--w:100%"></i><i style="--w:62%"></i></div></li>
-              <li><div class="lines"><i style="--w:92%"></i><i style="--w:40%"></i></div></li>
-              <li><div class="lines"><i style="--w:98%"></i><i style="--w:68%"></i></div></li>
-              <li><div class="lines"><i style="--w:100%"></i><i style="--w:46%"></i></div></li>
-            </ol>
+          <!-- ===== GEVERA ===== -->
+          <div class="panel" role="tabpanel" id="panel-gevera" aria-labelledby="tab-gevera" style="--c: var(--lime)" hidden>
+            <div class="refl">
+              <figure class="rphoto">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
+                <span>Photo of Gevera</span>
+              </figure>
+              <div class="rtext">
+                <div class="pan-head"><h3>Reflection by Gevera, Daniel</h3></div>
+                <p>
+                  <!-- paste Gevera's reflection paragraph here -->
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="panel" role="tabpanel" id="panel-pasion" aria-labelledby="tab-pasion" style="--c: var(--ice)" hidden>
-            <div class="pan-head"><h3>Reflection by Pasion</h3></div>
-            <ol class="sent">
-              <li><div class="lines"><i style="--w:100%"></i><i style="--w:48%"></i></div></li>
-              <li><div class="lines"><i style="--w:94%"></i><i style="--w:66%"></i></div></li>
-              <li><div class="lines"><i style="--w:98%"></i><i style="--w:42%"></i></div></li>
-              <li><div class="lines"><i style="--w:90%"></i><i style="--w:58%"></i></div></li>
-              <li><div class="lines"><i style="--w:100%"></i><i style="--w:36%"></i></div></li>
-            </ol>
-          </div>
-
-          <div class="panel" role="tabpanel" id="panel-beltran" aria-labelledby="tab-beltran" style="--c: var(--pink)" hidden>
-            <div class="pan-head"><h3>Reflection by Beltran, Noella Mariz</h3></div>
-            <p>Through our Organizational Communication subject, I learned how important effective
-              communication is in maintaining a well-organized and productive organization.
-              I understood that communication is not just about sharing information but also about
-              listening, understanding different perspectives, and working together toward a common goal.
-              I also learned how different roles, responsibilities, and communication channels contribute
-              to the success of a team. This subject helped me realize that misunderstandings can affect an
-              organization's performance, which is why clarity, respect, and cooperation are essential. Overall,
-              what I learned will help me become a better communicator and a more responsible team member in both
-              my academic and future professional life.</p>
-          </div>
-
+          <!-- ===== MENDIOLA ===== -->
           <div class="panel" role="tabpanel" id="panel-mendiola" aria-labelledby="tab-mendiola" style="--c: var(--violet)" hidden>
-            <div class="pan-head"><h3>Reflection by Mendiola</h3><span>5 sentences · one page</span></div>
-            <ol class="sent">
-              <li><div class="lines"><i style="--w:98%"></i><i style="--w:46%"></i></div></li>
-              <li><div class="lines"><i style="--w:90%"></i><i style="--w:70%"></i></div></li>
-              <li><div class="lines"><i style="--w:100%"></i><i style="--w:52%"></i></div></li>
-              <li><div class="lines"><i style="--w:96%"></i><i style="--w:60%"></i></div></li>
-              <li><div class="lines"><i style="--w:92%"></i><i style="--w:34%"></i></div></li>
-            </ol>
+            <div class="refl">
+              <figure class="rphoto">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
+                <span>Photo of Mendiola</span>
+              </figure>
+              <div class="rtext">
+                <div class="pan-head"><h3>Reflection by Mendiola, Carl Justin</h3></div>
+                <p>
+                  <!-- paste Mendiola's reflection paragraph here -->
+                </p>
+              </div>
+            </div>
           </div>
+
+          <!-- ===== PALLER ===== -->
+          <div class="panel" role="tabpanel" id="panel-paller" aria-labelledby="tab-paller" style="--c: var(--sky)" hidden>
+            <div class="refl">
+              <figure class="rphoto">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
+                <span>Photo of Paller</span>
+              </figure>
+              <div class="rtext">
+                <div class="pan-head"><h3>Reflection by Paller, Zither Alphonsus</h3></div>
+                <p>
+                  <!-- paste Paller's reflection paragraph here -->
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== PASION ===== -->
+          <div class="panel" role="tabpanel" id="panel-pasion" aria-labelledby="tab-pasion" style="--c: var(--ice)" hidden>
+            <div class="refl">
+              <figure class="rphoto">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
+                <span>Photo of Pasion</span>
+              </figure>
+              <div class="rtext">
+                <div class="pan-head"><h3>Reflection by Pasion, Hans Philip</h3></div>
+                <p>
+                  <!-- paste Pasion's reflection paragraph here -->
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
