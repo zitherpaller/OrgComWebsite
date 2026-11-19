@@ -462,7 +462,7 @@
           <div class="num">3</div>
           <div>
             <h2 id="h3-theory">Theory &amp; Theorist</h2>
-            <p class="hint">Basis of the company · <span style="white-space: nowrap">pp. 31–39</span></p>
+            <p class="hint">Basis of the company · </p>
           </div>
         </div>
       </div>
@@ -470,29 +470,55 @@
         <div class="theory-grid">
           <div class="card rv" style="--c: var(--pink)">
             <div class="tcard">
-              <div class="flip" id="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Theorist photo. Press to flip and see why we chose this theory.">
+
+              <!-- Flip photo: front = theorist, back = second image -->
+              <div class="flip" id="flip" role="button" tabindex="0" aria-pressed="false"
+                   aria-label="Theorist photo. Press to flip and see the other image.">
                 <div class="flip-in">
-                  <div class="face ph">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
-                    <span>Photo of the theorist</span>
-                    <span class="flipnote">Tap to flip</span>
+                  <div class="face front">
+                    <img src="img/renesis.jpg" alt="Photo of Rensis Likert">
                   </div>
-                  <div class="face back">
-                    <strong>Why we chose it</strong>
-                    <div class="lines"><i style="--w:100%"></i><i style="--w:88%"></i><i style="--w:94%"></i><i style="--w:56%"></i></div>
+                  <div class="face back photo">
+                    <img src="img/pdm diagram.jpg" alt="PDM Theory">
                   </div>
                 </div>
+                <span class="flip-hint" id="flipHint" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg>
+                  <span id="flipHintText">Tap to flip</span>
+                </span>
               </div>
+
               <div>
-                <div class="chips">
-                  <span class="tag" style="--c: var(--pink)">Basis of the company</span>
-                  <span class="tag" style="--c: var(--sky)">pp. 31–39</span>
+
+                <!-- Paragraph switcher -->
+
+                <h5 class="fw-word-sm">Rensis Likert’s Participative Decision-Making (PDM) Theory</h5>
+
+                <p class="kicker"></p>
+
+
+                <div class="ttabs" role="tablist" aria-label="Theory sections">
+                  <button class="ttab" role="tab" id="tt-1" aria-controls="tp-1" aria-selected="true" type="button">Description of the theory</button>
+                  <button class="ttab" role="tab" id="tt-2" aria-controls="tp-2" aria-selected="false" tabindex="-1" type="button">Basis of the company</button>
+                  <button class="ttab" role="tab" id="tt-3" aria-controls="tp-3" aria-selected="false" tabindex="-1" type="button">Why we chose it</button>
                 </div>
-                <p class="kicker">Description of the theory</p>
-                <div class="lines">
-                  <i style="--w:100%"></i><i style="--w:90%"></i><i style="--w:96%"></i><i style="--w:84%"></i><i style="--w:52%"></i>
+
+                <div class="tpanel" id="tp-1" role="tabpanel" aria-labelledby="tt-1">
+                  <p class="kicker">Description of the theory</p>
+                  <p>Rensis Likert’s Participative Decision-Making (PDM) Theory emphasizes the importance of involving employees and members in organizational decision-making. According to Likert, effective organizations are those where leaders recognize the value of their people, consider their opinions, and encourage them to participate in decisions that affect the organization. Rather than treating members as ordinary workers who simply follow instructions, this theory promotes trust, cooperation, open communication, and shared responsibility. It highlights that an organization becomes more productive and successful when its members feel valued and are given opportunities to contribute their ideas.</p>
+                </div>
+
+                <div class="tpanel" id="tp-2" role="tabpanel" aria-labelledby="tt-2" hidden>
+                  <p class="kicker">Basis of the company</p>
+                  <p>This theory relates to CyberKada because our organization promotes cybersecurity awareness, digital literacy, and responsible technology use through teamwork and collective efforts. Although each of our five members has a specific role and responsibility, every member contributes ideas, suggestions, and efforts toward achieving our common goals. For instance, when planning cybersecurity awareness campaigns, creating educational materials, or organizing activities, members can share their perspectives and participate in making decisions. Our organizational structure provides leadership and clear responsibilities while still allowing collaboration and communication among members. This reflects Likert’s idea that an organization’s success depends not only on its leaders but also on the active participation of its people.</p>
+                </div>
+
+                <div class="tpanel" id="tp-3" role="tabpanel" aria-labelledby="tt-3" hidden>
+                  <p class="kicker">Why we chose it</p>
+                  <p>We chose Rensis Likert’s Participative Decision-Making Theory because we believe that CyberKada cannot achieve its objectives through individual efforts alone. Since our organization focuses on educating and empowering people about cybersecurity, we also need to practice the values we promote within our own team. By listening to one another, respecting different opinions, and making decisions collaboratively, we can develop better ideas and accomplish our responsibilities more effectively. This theory represents the kind of organization we want CyberKada to be: one where leadership is supported by teamwork, every member has a voice, and everyone works together toward a common purpose.</p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

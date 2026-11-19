@@ -321,3 +321,38 @@
     if (top) top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: behavior }); });
   })();
 })();
+
+/* Section 3: paragraph tabs */
+(function () {
+  const tabs = Array.from(document.querySelectorAll('.ttab'));
+  if (!tabs.length) return;
+
+  function select(tab) {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      select(n);
+      n.focus();
+    });
+  });
+})();
+
+/* Section 3: flip hint text follows the flip state */
+(function () {
+  const flip = document.getElementById('flip');
+  const txt = document.getElementById('flipHintText');
+  if (!flip || !txt) return;
+  new MutationObserver(() => {
+    txt.textContent = flip.getAttribute('aria-pressed') === 'true' ? 'Tap to flip back' : 'Tap to flip';
+  }).observe(flip, { attributes: true, attributeFilter: ['aria-pressed'] });
+})();
