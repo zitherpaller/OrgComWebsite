@@ -180,7 +180,30 @@
     function toggle() {
       flip.setAttribute('aria-pressed', String(flip.getAttribute('aria-pressed') !== 'true'));
     }
-    flip.addEventListener('click', toggle);
+
+        // "Enlarge" pill: only on the diagram side, only on hover (always on touch screens)
+    var pill = $('#flipZoom');
+    function showPill() {
+      if (pill) pill.style.opacity = flip.getAttribute('aria-pressed') === 'true' ? '1' : '0';
+    }
+    
+    flip.addEventListener('mouseenter', showPill);
+    flip.addEventListener('mouseleave', function () { if (pill) pill.style.opacity = '0'; });
+    new MutationObserver(function () {
+      if (!pill) return;
+      var touch = window.matchMedia('(hover: none)').matches;
+      pill.style.opacity = (touch && flip.getAttribute('aria-pressed') === 'true') ? '1' : '0';
+    }).observe(flip, { attributes: true, attributeFilter: ['aria-pressed'] });
+
+    flip.addEventListener('click', function (e) {
+      // flipped: clicking the diagram enlarges it; the "Tap to flip back" pill flips back
+      if (flip.getAttribute('aria-pressed') === 'true' && !e.target.closest('#flipHint')) {
+        var z = $('#flipZoom');
+        if (z) { z.click(); return; }
+      }
+      toggle();
+    });
+    
     flip.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
     });
@@ -283,6 +306,26 @@
   (function lightbox() {
     var lb = $('#lb');
     var body = $('#lb-body');
+
+        var fz = $('#flipZoom');
+    if (fz) {
+      fz.addEventListener('click', function (e) {
+        e.stopPropagation(); // don't flip the card back
+        var src = $('#flip .face.back img');
+        if (!src) return;
+        var wrap = document.createElement('div');
+        wrap.className = 'lb-img';
+        var img = document.createElement('img');
+        img.src = src.getAttribute('src');
+        img.alt = src.getAttribute('alt') || '';
+        wrap.appendChild(img);
+        body.innerHTML = '';
+        body.appendChild(wrap);
+        if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
+      });
+      fz.addEventListener('keydown', function (e) { e.stopPropagation(); });
+    }
+
     if (!lb || !body) return;
     $$('[data-zoom]').forEach(function (el) {
       el.addEventListener('click', function () {

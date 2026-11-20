@@ -952,3 +952,56 @@ dialog.lb::backdrop { background: rgba(5, 12, 28, .8); -webkit-backdrop-filter: 
   backdrop-filter: blur(6px);
   pointer-events: none;           /* lets you still drag the map under it */
 }
+
+/* ===== Enlarge pill on the flipped PDM diagram ===== */
+.flip .flip-zoom {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 4;
+  display: block;
+  margin: 0;
+  padding: 3px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font: 600 11px var(--font-body);
+  letter-spacing: .06em;
+  line-height: 1.5;
+  cursor: zoom-in;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+}
+.flip[aria-pressed="true"]:hover .flip-zoom,
+.flip[aria-pressed="true"] .flip-zoom:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (hover: none) {
+  .flip[aria-pressed="true"] .flip-zoom { opacity: 1; pointer-events: auto; }
+}
+
+/* flipped: whole diagram is click-to-enlarge; only the hint pill flips back */
+.flip[aria-pressed="true"] { cursor: zoom-in; }
+.flip[aria-pressed="true"] .flip-hint { pointer-events: auto; cursor: pointer; }
+.flip .flip-zoom { pointer-events: none !important; }
+
+.lb-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.lb-img img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 90px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+}
