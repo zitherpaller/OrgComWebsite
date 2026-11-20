@@ -913,3 +913,42 @@ dialog.lb::backdrop { background: rgba(5, 12, 28, .8); -webkit-backdrop-filter: 
   .clist .copy { grid-column: 2; justify-self: start; }
   .acc-body { padding-left: 16px; }
 }
+
+.split{ align-items: stretch; }
+
+.map-card{
+  position: relative;
+  padding: 0;                     /* map goes edge to edge */
+  overflow: hidden;               /* clips the map to the card's rounded corners */
+  min-height: 300px;              /* fallback for mobile when cards stack */
+}
+
+.map-card .map-wrap{
+  position: absolute;
+  inset: 0;                       /* fill the entire card */
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  aspect-ratio: auto;
+}
+
+.map-card .map-wrap iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.map-card .note{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: .85rem;
+  background: rgba(10, 25, 50, .85);
+  backdrop-filter: blur(6px);
+  pointer-events: none;           /* lets you still drag the map under it */
+}
